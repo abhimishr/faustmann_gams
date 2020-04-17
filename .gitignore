@@ -6,3 +6,7 @@
 *.log*
 *.opt
 .Rproj.user
+*.lst
+*.lxi
+*.gdx
+*.txt

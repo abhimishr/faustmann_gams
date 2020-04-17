@@ -1,51 +1,23 @@
-*** |  (C) 2008-2019 Potsdam Institute for Climate Impact Research (PIK)
-*** |  authors, and contributors see CITATION.cff file. This file is part
-*** |  of MAgPIE and licensed under AGPL-3.0-or-later. Under Section 7 of
-*** |  AGPL-3.0, you are granted additional permissions described in the
-*** |  MAgPIE License Exception, version 1.0 (see LICENSE file).
-*** |  Contact: magpie@pik-potsdam.de
-
 variable
-time
+VAR_time                                Faustmann rotation time which maximizes NPV (yrs)
+VAR_net_present_value                   Net present value of the harvest rotation (USD)
+VAR_forest_volume_firest_derivative     Marginal of forest growth volume
+VAR_forest_volume                       Forest volume at a given time
+VAR_land_rent                           Present value of investment returns lost by not harvesting now
+VAR_value_at_harvest                    Market value if harvest happend in current time
+VAR_discount_factor                     Discount factor
 ;
 
-variable
-V
-rT
-f_d_t
-f_t
-rV
-pft
+parameters
+PAR_forest_volume_marginal              Marginal of forest growth
 ;
-
-parameter par_f_d_t;
 
 equation
-timing_up
-timing_lo
-growth
-NPV
-growth_m
-rNPV
-val
-faustmann_eq
+EQ_discount_factor                      Discount factor
+EQ_growth                               Forestr volume at a given time
+EQ_net_present_value                    Net present value of the harvest rotation (USD)
+EQ_growth_marginal                      Marginal of forest growth volume
+EQ_land_rent                            Present value of investment returns lost by not harvesting now
+EQ_value_at_harvest                     Market value if harvest happend in current time
+EQ_faustmann                            Faustmann equation deciding optimal rotation
 ;
-
-
-$ontext
-variable f(T);
-*f(T) = 4*80*1.64*ord(T)/card(T);
-*f(T) =e= system.exp(9.75 - (3000/(300*ord(T))) - (740/(ord(T)*80)) - (1500/(80**2)) - (34/ord(T)**2) );
-
-parameter f_dash(T);
-
-variable V;
-
-variable IGR(T);
-
-equation
-GROWTH(T)
-InGrRt(T)
-NPV
-;
-$offtext

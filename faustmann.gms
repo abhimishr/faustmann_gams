@@ -10,10 +10,10 @@ option lp   = cplex ;
 option nlp  = conopt;
 
 $include "./faustmann/sets.gms"
-$include "./macros.gms"
 $include "./faustmann/declarations.gms"
 $include "./faustmann/input.gms"
 $include "./faustmann/equations.gms"
 $include "./faustmann/preloop.gms"
 $include "./faustmann/presolve.gms"
 $include "./faustmann/calculations.gms"
+$include "./faustmann/postsolve.gms"
