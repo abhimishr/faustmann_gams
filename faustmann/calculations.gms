@@ -1,8 +1,8 @@
 
-loop(T2,
-solve faustmann using nlp maximizing VAR_time;
+*loop(T2,
+solve faustmann using nlp maximizing VAR_net_present_value;
 $include "./faustmann/postsolve.gms"
-);
+*);
 
 * store all results in gdx file
 execute_Unload "fulldata.gdx";

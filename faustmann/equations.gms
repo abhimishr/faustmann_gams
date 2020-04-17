@@ -7,7 +7,7 @@ EQ_growth..             VAR_forest_volume
                         =e=
                         SCALAR_a*SCALAR_b*1.64*(6.36-6**(VAR_time/SCALAR_b))**3.897;
 
-EQ_growth_marginal..    VAR_forest_volume_firest_derivative
+EQ_growth_marginal..    VAR_forest_volume_forest_derivative
                         =e=
                         PAR_forest_volume_marginal;
 
@@ -25,7 +25,7 @@ EQ_value_at_harvest..   VAR_value_at_harvest
                         SCALAR_price * VAR_forest_volume;
 
 EQ_faustmann..
-  SCALAR_price * VAR_forest_volume_firest_derivative
+  SCALAR_price * VAR_forest_volume_forest_derivative
   =e=
   SCALAR_interest_rate*VAR_value_at_harvest + VAR_land_rent
   ;

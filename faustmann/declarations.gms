@@ -1,7 +1,7 @@
 variable
 VAR_time                                Faustmann rotation time which maximizes NPV (yrs)
 VAR_net_present_value                   Net present value of the harvest rotation (USD)
-VAR_forest_volume_firest_derivative     Marginal of forest growth volume
+VAR_forest_volume_forest_derivative     Marginal of forest growth volume
 VAR_forest_volume                       Forest volume at a given time
 VAR_land_rent                           Present value of investment returns lost by not harvesting now
 VAR_value_at_harvest                    Market value if harvest happend in current time
